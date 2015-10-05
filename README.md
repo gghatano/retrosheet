@@ -16,6 +16,12 @@ retrosheet関数に年度を指定すれば、その年のメジャーリーグ�
 dat <- retrosheet(1938)
 ```````
 
+## ライセンス
+
+>     The information used here was obtained free of
+>     charge from and is copyrighted by Retrosheet.  Interested
+>     parties may contact Retrosheet at "www.retrosheet.org".
+
 ## ToDoリスト
 
 * ライセンス周りのコメント
