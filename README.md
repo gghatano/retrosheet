@@ -26,6 +26,22 @@ library(devtools)
 install_github("gghatano/retrosheet")
 ```
 
+### 確認されている不具合
+
+* 手元のMacOSのR-3.2ではインストールできた。
+
+* CentOS6, R-3.2で、インストール時に「httpsに対応していない」という旨のエラーが出て失敗する。
+
+```r
+(前略)
+* installing *source* package ‘retrosheet’ ...
+** R
+** preparing package for lazy loading
+Error in file(file, "rt") : https:// URLs are not supported
+(後略)
+```
+
+=> 解決できていない。
 
 ## ライセンス
 
