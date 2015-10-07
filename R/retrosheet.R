@@ -13,21 +13,14 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-retrosheet <- function(year_){
+retrosheet <- function(year){
 
-  dataLink <- as.character(c(
-    "https://www.dropbox.com/s/vw5988d8tzvhnby/all1938.csv?dl=1",
-    "https://www.dropbox.com/s/f6qm8v1deojid4f/all1939.csv?dl=1"
-  ))
+  library(data.table)
+  year=2013
+  dataLink <- paste("http://www7275uo.sakura.ne.jp/batting_datafiles/all", year, ".csv", sep="");
 
-  year <- 1938:1939
-
-  dataLinkTable <- data.frame(year = year, link = dataLink)
-
-  link <- dataLinkTable[year_ - 1937,]$link
-
-  dat <- read.table(as.character(link), header = FALSE, sep=",")
-
+  dat <- data.table::fread(input = dataLink, header=FALSE, data.table=FALSE)
+  
   dat_col=c("GAME_ID","AWAY_TEAM_ID","INN_CT","BAT_HOME_ID","OUTS_CT","BALLS_CT","STRIKES_CT",
             "PITCH_SEQ_TX","AWAY_SCORE_CT","HOME_SCORE_CT","BAT_ID","BAT_HAND_CD","RESP_BAT_ID",
             "RESP_BAT_HAND_CD","PIT_ID","PIT_HAND_CD","RESP_PIT_ID","RESP_PIT_HAND_CD","POS2_FLD_ID","POS3_FLD_ID",
@@ -45,5 +38,3 @@ retrosheet <- function(year_){
   names(dat) <- dat_col
   return(dat)
 }
-
-dat = retrosheet(1938)
