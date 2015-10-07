@@ -21,27 +21,14 @@ dat <- retrosheet(1938)
 
 devtools::install_github()を使います。
 ```r
-install_github("gghatano/retrosheet")
 library(devtools)
 install_github("gghatano/retrosheet")
 ```
+## 確認されている不具合
 
-### 確認されている不具合
+* 進捗見たさにdata.table::freadでデータ取得を行っているが、freadだとデータの読み込みエラーが出ることがある。
 
-* 手元のMacOSのR-3.2ではインストールできた。
-
-* CentOS6, R-3.2で、インストール時に「httpsに対応していない」という旨のエラーが出て失敗する。
-
-```r
-(前略)
-* installing *source* package ‘retrosheet’ ...
-** R
-** preparing package for lazy loading
-Error in file(file, "rt") : https:// URLs are not supported
-(後略)
-```
-
-=> 解決できていない。
+=> readrなどを試すor別の方法で進捗を見る
 
 ## ライセンス
 
