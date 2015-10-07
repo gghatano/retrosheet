@@ -51,8 +51,6 @@ Error in file(file, "rt") : https:// URLs are not supported
 
 ## ToDoリスト
 
-* 1940年以降のデータの準備
-
 * プログレスバーの追加
 
 * Lahmanパッケージとの連携
