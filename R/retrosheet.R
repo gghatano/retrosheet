@@ -15,11 +15,10 @@
 
 retrosheet <- function(year){
 
-  library(data.table)
-  year=2013
+  library(readr)
   dataLink <- paste("http://www7275uo.sakura.ne.jp/batting_datafiles/all", year, ".csv", sep="");
 
-  dat <- data.table::fread(input = dataLink, header=FALSE, data.table=FALSE)
+  dat <- read_csv(dataLink)
   
   dat_col=c("GAME_ID","AWAY_TEAM_ID","INN_CT","BAT_HOME_ID","OUTS_CT","BALLS_CT","STRIKES_CT",
             "PITCH_SEQ_TX","AWAY_SCORE_CT","HOME_SCORE_CT","BAT_ID","BAT_HAND_CD","RESP_BAT_ID",
