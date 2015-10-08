@@ -24,11 +24,7 @@ devtools::install_github()を使います。
 library(devtools)
 install_github("gghatano/retrosheet")
 ```
-## 確認されている不具合
 
-* 進捗見たさにdata.table::freadでデータ取得を行っているが、freadだとデータの読み込みエラーが出ることがある。
-
-=> readrなどを試すor別の方法で進捗を見る
 
 ## ライセンス
 
@@ -37,7 +33,5 @@ install_github("gghatano/retrosheet")
 >     parties may contact Retrosheet at "www.retrosheet.org".
 
 ## ToDoリスト
-
-* プログレスバーの追加
 
 * Lahmanパッケージとの連携
