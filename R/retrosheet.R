@@ -14,12 +14,14 @@
 #   Test Package:              'Cmd + Shift + T'
 
 retrosheet <- function(year){
-
-  library(readr)
+  
+  ## link for batting_data
   dataLink <- paste("http://www7275uo.sakura.ne.jp/batting_datafiles/all", year, ".csv", sep="");
 
-  dat <- read_csv(dataLink)
+  ## download
+  dat <- readr::read_csv(dataLink)
   
+  ## column names
   dat_col=c("GAME_ID","AWAY_TEAM_ID","INN_CT","BAT_HOME_ID","OUTS_CT","BALLS_CT","STRIKES_CT",
             "PITCH_SEQ_TX","AWAY_SCORE_CT","HOME_SCORE_CT","BAT_ID","BAT_HAND_CD","RESP_BAT_ID",
             "RESP_BAT_HAND_CD","PIT_ID","PIT_HAND_CD","RESP_PIT_ID","RESP_PIT_HAND_CD","POS2_FLD_ID","POS3_FLD_ID",
@@ -33,7 +35,7 @@ retrosheet <- function(year){
             "RUN1_RESP_PIT_ID","RUN2_RESP_PIT_ID","RUN3_RESP_PIT_ID","GAME_NEW_FL","GAME_END_FL","PR_RUN1_FL","PR_RUN2_FL","PR_RUN3_FL",
             "REMOVED_FOR_PR_RUN1_ID","REMOVED_FOR_PR_RUN2_ID","REMOVED_FOR_PR_RUN3_ID","REMOVED_FOR_PH_BAT_ID","REMOVED_FOR_PH_BAT_FLD_CD",
             "PO1_FLD_CD","PO2_FLD_CD","PO3_FLD_CD","ASS1_FLD_CD","ASS2_FLD_CD","ASS3_FLD_CD","ASS4_FLD_CD","ASS5_FLD_CD","EVENT_ID")
-
   names(dat) <- dat_col
+  
   return(dat)
 }
