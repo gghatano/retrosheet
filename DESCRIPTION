@@ -1,10 +1,10 @@
 Package: retrosheet
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1
-Date: 2015-10-05
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Title: Download retrosheet data
+Version: 0.2
+Date: 2019-06-04
+Author: gg_hatano
+Maintainer: gg_hatano <Twitter:gg_hatano>
+Description: Download retrosheet data
 License: What license is it under?
 LazyData: TRUE
